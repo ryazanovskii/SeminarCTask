@@ -49,26 +49,15 @@
 // int[] newArray = CreateRandomArray(size);
 // ShowArray(newArray);
 
-// int index = 0;
+// int count = 0;
 // for (int i = 0; i < newArray.Length; i++)
 // {   
-//     if (newArray[i] % 2 == 0)
-//     {   
-//         index++;
-//     }
+//     if (newArray[i] % 2 == 0) count++;
 // }
-// if (index % 10 == 1)
-// {
-//     Console.WriteLine($"In the array {index} even numbers");
-// }
-// if (index % 10 == 2 || index % 10 == 3 || index % 10 == 4)
-// {
-//     Console.WriteLine($"In the array {index} even numbers");
-// }
-// else
-// {
-//    Console.WriteLine($"In the array {index} even numbers");
-// }
+// if (count % 10 == 1) Console.WriteLine($"In the array {count} even numbers");
+
+// else Console.WriteLine($"In the array {count} even numbers");
+
 // -------------------------------------------------------------
 
 // Задайте одномерный массив, заполненный случайными числами. Найдите сумму элементов, стоящих на нечётных позициях.
@@ -102,7 +91,7 @@
 // int result = 0;
 // for(int i = 1; i < size; i+=2)
 // {   
-//     result = result + newArray[i];
+//     result += newArray[i];
 // }
 // Console.WriteLine($"the sum of the elements standing in odd positions = {result}");
 
@@ -111,26 +100,41 @@
 // Задача 38: Задайте массив вещественных чисел. Найдите разницу между максимальным и минимальным элементов массива.
 // [3 7 22 2 78] -> 76
 
-int size = 5;
-int[] CreateRandomArray(int size)
-{
-    int[] array = new int[size]; 
+// int size = 5;
+// double[] CreateRandomArray(int size)
+// {
+//     double[] array = new double[size];
+//     {
+//         Random rand = new Random();
+//             for (int i = 0; i < size; i++)
+//             {
+//                 array[i] = Math.Round(rand.Next(0,100) * 0.1, 1);
+//             }
+//         return array;
+//     }
+// }
 
-    for (int i = 0; i < size; i ++)
-    {
-        array[i] = new Random().Next(10, 100);
-    }
-    return array;
-}
+// void ShowArray(double[] array)
+// {
+//     for (int i = 0; i < array.Length; i++)
+//     {
+//         Console.Write(array[i] + " ");
+//     }
+//     Console.WriteLine();
+// }
 
-void ShowArray (int[] array)
-{
-    for(int i = 0; i < array.Length; i++)
-    {
-        Console.Write(array[i] + " ");
-    }
-    Console.WriteLine();
-}
+// double[] newArray = CreateRandomArray(size);
+// ShowArray(newArray);
 
-int[] newArray = CreateRandomArray(size);
-ShowArray(newArray);
+// double difference = 0;
+// double maxValue = newArray[0];
+// double minValue = newArray[0];
+// for (int i = 0; i < newArray.Length; i++)
+// {
+//     if (maxValue < newArray[i]) maxValue = newArray[i];
+//     if (minValue > newArray[i]) minValue = newArray[i];
+// }
+// difference += maxValue - minValue;
+// Console.WriteLine($"Difference maximum {maxValue} and minimum {minValue} numbers = {difference}");
+
+// ------------------------------------------------------------------------------------------------
