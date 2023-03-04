@@ -96,63 +96,51 @@
 // 8 4 2 4
 // Среднее арифметическое каждого столбца: 4,6; 5,6; 3,6; 3.
 
+// int rows = 4;
+// int colums = 4; 
+// int[,] CreateRandom2dArray(int rows, int colums)
+// {
+//     int[,] array = new int[rows, colums];
+//     {    
+//         Random random = new Random();
+//             for (int i = 0; i < rows; i++)
+//             {
+//                 for (int j = 0; j < colums; j++)
+//                     array[i, j] = random.Next(100);
+//             }
+//         return array;
+//     }
+// }
 
-
-int rows = 4;
-int colums = 4; 
-int[,] CreateRandom2dArray(int rows, int colums)
-{
-    int[,] array = new int[rows, colums];
-    {    
-        Random random = new Random();
-            for (int i = 0; i < rows; i++)
-            {
-                for (int j = 0; j < colums; j++)
-                    array[i, j] = random.Next(100);
-            }
-        return array;
-    }
-}
-
-void Show2dArray(int[,] array)
-{
-    for (int i = 0; i < array.GetLength(0); i++)
-    {
-        for (int j = 0; j < array.GetLength(1); j++) 
-            Console.Write(array[i,j] + " ");
+// void Show2dArray(int[,] array)
+// {
+//     for (int i = 0; i < array.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < array.GetLength(1); j++) 
+//             Console.Write(array[i,j] + " ");
         
-        Console.WriteLine();
-    }
-    Console.WriteLine();
-}
+//         Console.WriteLine();
+//     }
+//     Console.WriteLine();
+// }
 
-int[,] newArray = CreateRandom2dArray(rows, colums);
-Show2dArray(newArray);
+// int[,] newArray = CreateRandom2dArray(rows, colums);
+// Show2dArray(newArray);
 
-double[] means = new double[newArray.GetLength(1)];
-for (int j = 0; j < newArray.GetLength(1); j++)
-{
-    double sum = 0;
-    for (int i = 0; i < newArray.GetLength(0); i++)
-    {
-        sum += newArray[i, j];
-    }
-   means[j] = sum / newArray.GetLength(0);
-}
+// double[] arithmeticMean = new double[newArray.GetLength(1)];
+// for (int j = 0; j < newArray.GetLength(1); j++)
+// {
+//     double sum = 0;
+//     for (int i = 0; i < newArray.GetLength(0); i++)
+//     {
+//         sum += newArray[i, j];
+//     }
+//    arithmeticMean[j] = sum / newArray.GetLength(0);
 
-Console.WriteLine(" ");
+// }
 
-for (int i = 0; i < newArray.GetLength(0); i++)
-{
-    for (int j = 0; j < newArray.GetLength(1); j++)
-    {
-        Console.Write(newArray[i, j] + " ");
-    }
-    Console.WriteLine();
-}
-Console.WriteLine();
-Console.WriteLine("Meaning:");
-for (int j = 0; j < newArray.GetLength(1); j++)
-{
-    Console.WriteLine($"Column {j}: {means[j]}");
-}
+// Console.WriteLine("Meaning:");
+// for (int j = 0; j < newArray.GetLength(1); j++)
+// {
+//     Console.WriteLine($"Column {j}: {arithmeticMean[j]}");
+// }
